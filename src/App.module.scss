@@ -1,0 +1,45 @@
+@import './variable.scss';
+
+$bgColor:lime;
+$fontFamily:Arial;
+$primary-color:red;
+$secondary-Color:#0f3c85;
+$color:(
+    "primary-color":red,
+    "secondary-Color":#0f3c85
+);
+/*mixin is a block of css to defined and use at later point*/
+@mixin flexContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.App{
+    @include flexContainer;
+    background-color: $bgColor;
+    height: 80vh;
+
+    div{
+        color:$foreground-color;
+    }
+}
+
+.wwww{
+    color:$primary-color;
+
+    p{
+        margin-top:25px;
+        background-color: map-get($color,"secondary-Color");
+        color:limegreen;
+    }
+    h2{
+        font-family: $fontFamily;
+ }
+
+}
+
